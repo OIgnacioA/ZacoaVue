@@ -1,0 +1,48 @@
+
+ El archivo sacoa-38_Key.json que proporcionaste inicialmente contiene las credenciales de una cuenta de servicio para Firebase Admin SDK, que generalmente se usa en el backend o en entornos Node.js, no en aplicaciones frontend como las construidas con Vue.js. Para aplicaciones frontend, usar la configuración del SDK de Firebase (la configuración que obtuviste después) es lo más adecuado y seguro.
+
+ Aquí hay una razón importante para esto:
+
+Firebase Admin SDK: Está destinado a usarse en un entorno de servidor donde se puede gestionar de forma segura las claves y credenciales. Tiene acceso a privilegios elevados y puede realizar todas las operaciones administrativas.
+Firebase JS SDK: Está diseñado para aplicaciones cliente (frontend). Utiliza la configuración de la aplicación web (con la apiKey, authDomain, etc.) que obtuviste desde la consola de Firebase. Este SDK está optimizado para el uso en el cliente y tiene restricciones de seguridad para evitar el acceso no autorizado.
+
+
+
+{
+  "type": "service_account",
+  "project_id": "sacoa-38",
+  "private_key_id": "19e2de669c4eb89d167a3bc7c685b46c4a62457b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDjzBaoeLAu3APK\nnaDvhLR/pt6BBcMtQ8QvR/B+V12lUAUKjeCM13pGKlZv6vTbiUZ/DiX+Vegm3TVz\nn3cGD/+QBIo3i6VUJkZhIiYFh+8WX8EzuvQh6Khv2sf+dglBt8ZJg0LwpJAEqbtO\nxhDwQ0Y0hpu4QRUkLeKJ2WS6q8ZyAo9keKGK48R0QZReLw7LPv6eLUr561skRBsq\nuUYzq7dSpOsEn23N44rA/XO2b8mufdxYe+GFy1nwjNhQHxzl7VAtDHaq05mfPLy4\njZSwjDYVjHb1XiEfF25KMfP+KKMWQJYWJski+uYTQVCQCD67wgRKBtd5U9ukvclU\nR+jtb8AdAgMBAAECggEAZUxzAP0WX+gv+XCqSgjp2WBDzv1Yg28AtYPYst44AxT4\nAO8BnbAOrFgUcxV5SI0dn8+TXqwmHe494EpX/AauP4V9T2EWprqUjopIfSorTHhN\naqsm+FNFX+RbDlHAIQzPrQ4lfOy5LJGr/UY/7xADjsUTR1cNxzZuaJ2XWRmdGEIr\nNoi603wAQ3OIASu957ouZMSTmeGrhE6BoFX7lDmOvaweG7iIrEp09NtlCZ7GU2nG\nSzm32a5Z9K6QZpDEMpiyob0KaZHWxQ9AIy0hrJeesJH0rRW9RUdVItfZU/o4QTo/\nUk77itgau149zEdFj31vH3B1YaDmtJAcCniQd0sJswKBgQD8L5RwEB+1D1m/srYC\nWlLkzPMNxq2G0i2hGqiZqQWcRGE+gCZVtUvRUPbDLGFijN/b5KYDxyv77G1XEnQQ\nudXZls4B+TSgMXOiq6xKsjver6VG3au8H/zt5GR6KznzvNu+GegW1j42eCpcr4Ou\nfGitNAeWX92i2lNIG4xmmGi5JwKBgQDnPhR/lgiFeaEOtqhCGENtV2+Zbwzaupef\nHHVkuabHKTTchQwRCiDj/5B5TfqamseyuwfVgGlf3EhS7OxNbkALOloN4Q6zclgm\nQIl+OelYWXam/5pOKpoA+UME4errPoKWFzxf2EECX9qrj8PJ4LV8DzTMqkmZl42f\nbfM7UpOfGwKBgBzPVrbisKyfn1IuGWr1ZKjs3QuC2gof8sSH5iD/1Ts/+JgKTdbW\nyl2UUUyEwm9exqg5W9nspBK4tNkQq5/Jiyu7dbd1/9QZMiuwTxONfxd2m3wYEOmC\nAgQvZmcqjwlQVw5FqWUKfrr8SWKjTnjdj5vR6Nf+BbT4GjGPrB+AY95bAoGAaamK\nQEpUFnlfSJPaCml/1eSQD/IYU5HTWlbspVvXg0Wm6+S3gMm6AbRzVZp2GlMDUP35\nNGt6utyzB4FO8IqiJP9Cyvi9eO2UrdXrfYwEveQTPXeqEHGS8UL0hrScXWWw0dhI\nNBtiiS03hBErC4HsK4XfQG3HN7FyexkIfWDcJ2UCgYATyOV2i2bwLVT3JzM3avH0\n7vsscENo3OeChK0rA3wwrzRE3wzeD0YEtd3wwExxsvZA6vdxQnjpfCtKrN53Jn9n\nJNbB9GuEEKphYocoYuRNlk7MQm4zh2ai2tlIS2XJ3jyJh+9wjYAS/NAjtNN5elL5\nxUzX0Yn25wk2piG6sUo7hg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-w5qfi@sacoa-38.iam.gserviceaccount.com",
+  "client_id": "109203531670851935724",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-w5qfi%40sacoa-38.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
+
+//------------>  el otro archivo que proponia el tutorial para firebase: 
+
+
+
+// const admin = require('firebase-admin');
+// const serviceAccount = require("./key_service_account.json"); const data = require("./food_list.json");
+// const collectionKey = "foodList"; // Name of the collection
+// admin.initializeApp({
+//  credential: admin.credential.cert (serviceAccount)
+// });
+
+// const firestore = admin.firestore ();
+// const settings = {timestampsInSnapshots: true};
+// firestore.settings (settings);
+
+// if (data && (typeof data === "object")) {
+//      Object.keys(data).forEach(docKey => {
+//     firestore.collection (collectionKey).doc(docKey).set(data[dockey]).then((res) => { console.log("Document " + dockey + "successfully written!");
+// }).catch((error) => {
+//     console.error("Error writing document:", error);
+// });
+// });
+// }
