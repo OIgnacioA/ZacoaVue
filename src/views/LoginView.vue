@@ -2,8 +2,8 @@
     <div class="login-container">
       <h2>Login</h2>
       <form @submit.prevent="login">
-        <input type="text" v-model="email" placeholder="Email" required />
-        <input type="password" v-model="password" placeholder="Password" required />
+        <input type="text" v-model="email" placeholder="Email" required /><br><br>
+        <input type="password" v-model="password" placeholder="Password" required /><br><br>
         <button type="submit">Login</button>
       </form>
       <p>No tienes una cuenta? <router-link :to="{ name: 'Signup' }">Regístrate aquí</router-link></p>
