@@ -10,7 +10,7 @@
   "dependencies": {
     "all": "^0.0.0",
     "core-js": "^3.8.3",
-    "firebase": "^10.12.1",
+    "firebase": "^9.23.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"

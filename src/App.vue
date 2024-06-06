@@ -1,19 +1,24 @@
 <template>
   <nav>
     <router-link :to="{name: 'home'}">Home</router-link> |
-    <router-link :to="{name: 'Zacoa'}">Zacoa</router-link>
+    <router-link :to="{name: 'Zacoa'}">Zacoa</router-link><br>
+    <button @click="goToLoginPage" class="login-button">Login</button>
   </nav>
   <router-view/>
 </template>
 
 <script setup>
 import { useStore } from 'vuex';
-
+import { useRouter } from 'vue-router'; 
 const store = useStore();
-
+const router = useRouter();
 // Llama a la acción para obtener el último documento al montar la aplicación
 store.dispatch('fetchLastDocument');
 store.dispatch('fetchLastNotes');
+
+const goToLoginPage = () => {
+  router.push({ name: 'Login' });
+};
 </script>
 
 

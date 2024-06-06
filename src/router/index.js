@@ -1,7 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import zacoa from '../views/ZacoaView.vue'
-
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import ZacoaView from '../views/ZacoaView.vue';
+import LoginView from '../views/LoginView.vue';
+import SignupView from '../views/SignupView.vue';
 
 const routes = [
   {
@@ -10,15 +11,26 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/Zacoa',
+    path: '/zacoa',
     name: 'Zacoa',
-    component : zacoa
+    component: ZacoaView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginView
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: SignupView
   }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-export default router
+export default router;
