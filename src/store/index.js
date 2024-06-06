@@ -18,7 +18,7 @@ export default createStore({
     }
   },
   mutations: {
-    
+
   setUser(state, user) {
       state.user = user;
       if (user) {
@@ -35,15 +35,15 @@ export default createStore({
       let montoPayload = parseFloat(payload.Monto);
       
       if ((payload.Person == 'Anto') && (payload.Modalidad == 'full')) {
-        cash = montoActual + montoPayload;
-      } else if ((payload.Person == 'Oscar') && (payload.Modalidad == 'full')) {
         cash = montoActual - montoPayload;
+      } else if ((payload.Person == 'Oscar') && (payload.Modalidad == 'full')) {
+        cash = montoActual + montoPayload;
       } else if ((payload.Person == 'Anto') && (payload.Modalidad == 'dividido')) {
         div = montoPayload / 2;
-        cash = montoActual + div;
+        cash = montoActual - div;
       } else if ((payload.Person == 'Oscar') && (payload.Modalidad == 'dividido')) {
         div = montoPayload / 2;
-        cash = montoActual - div;
+        cash = montoActual + div;
       }
 
       state.Monto = cash; 
