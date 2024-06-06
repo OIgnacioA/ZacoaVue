@@ -1,10 +1,10 @@
 <template>
-
  <Actual/>
  <Ingreso/>
  <mensaje/>
  <Resultado/>
  <button @click="logout" class="logout-button">Cerrar sesión</button>
+
 </template>
 
 

@@ -1,4 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
+
+import { useStore } from 'vuex';
+
+
 import ZacoaView from '../views/ZacoaView.vue';
 import LoginView from '../views/LoginView.vue';
 import SignupView from '../views/SignupView.vue';
@@ -30,6 +34,23 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+});
+
+
+
+
+
+
+router.beforeEach((to, from, next) => {
+  const store = useStore();
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const isAuthenticated = store.state.user;
+
+  if (requiresAuth && !isAuthenticated) {
+    next({ name: 'Login' });
+  } else {
+    next();
+  }
 });
 
 export default router;

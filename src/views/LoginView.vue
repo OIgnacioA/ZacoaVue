@@ -17,6 +17,10 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 import { useRouter } from 'vue-router';
 
+import { useStore } from 'vuex';
+const store = useStore();
+
+
 const router = useRouter();
 const email = ref('');
 const password = ref('');
@@ -28,6 +32,10 @@ const login = async () => {
         // Usuario autenticado correctamente
         const user = userCredential.user;
         console.log('Usuario autenticado:', user);
+
+        store.commit('setUser', user); // Guardar el usuario en el store
+
+
         // Redirigir a Zacoa después del inicio de sesión exitoso
         router.push({ name: 'Zacoa' });
     } catch (error) {

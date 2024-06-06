@@ -18,10 +18,16 @@ export default createStore({
     }
   },
   mutations: {
-    setUser(state, user) {
+    
+  setUser(state, user) {
       state.user = user;
-
+      if (user) {
+        localStorage.setItem('user', JSON.stringify(user));
+      } else {
+        localStorage.removeItem('user');
+      }
     },
+  
     setDatos(state, payload) {
       let cash = 0; 
       let div = 0;

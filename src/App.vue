@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link :to="{name: 'home'}">Home</router-link> |
+    <!-- <router-link :to="{name: 'home'}">Home</router-link> | -->
     <router-link :to="{name: 'Zacoa'}">Zacoa</router-link><br>
       </nav>
   <router-view/>
@@ -15,6 +15,7 @@ const store = useStore();
 store.dispatch('fetchLastDocument');
 store.dispatch('fetchLastNotes');
 
+store.dispatch('monitorAuthState');
 
 </script>
 
