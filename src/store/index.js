@@ -105,7 +105,7 @@ export default createStore({
     },
     async fetchLastNotes({ commit }) {
       try {
-        const q = query(collection(db, "MiColeccion"), orderBy("timestamp", "desc"), limit(20));
+        const q = query(collection(db, "MiColeccion"), orderBy("timestamp", "desc"));//limit(20)
         const querySnapshot = await getDocs(q);
         const notas = [];
         querySnapshot.forEach((doc) => {
